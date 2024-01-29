@@ -114,9 +114,9 @@ app.all("*" , (err , res , next) => {
 });
 
 // Template For All Types Of Error
-app.use((err , req , res , next) => {
+app.use((err , req , res) => {
     let {status = 500 , message = "Something Went Wrong!"} = err;
-    res.render("Listings/error.ejs" , {message, status});
+    res.render("Listings/error.ejs" , {status, message});
 })
 
 // Listening Port For Server
