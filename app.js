@@ -113,6 +113,7 @@ app.use("/" , userRouter);
 app.use((err , req , res , next) => {
     let {status = 500 , message = "Something Went Wrong!"} = err;
     res.render("Listings/error.ejs" , {message, status});
+    next();
 })
 
 // Page Not Found Error For Wrong Route
