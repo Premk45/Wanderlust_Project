@@ -108,10 +108,10 @@ app.use("/" , userRouter);
 
 
 
-// // Page Not Found Error For Wrong Route
-// app.all("*" , (err , res , next) => {
-//     next(new ExpressError(404 , "Page Not Found!"));
-// });
+// Page Not Found Error For Wrong Route
+app.all("*" , (err , res , next) => {
+    next(new ExpressError(404 , "Page Not Found!"));
+});
 
 // Template For All Types Of Error
 app.use((err , req , res) => {
