@@ -108,6 +108,10 @@ app.use("/" , userRouter);
 
 
 
+// Page Not Found Error For Wrong Route
+app.all("*" , (err , res , next) => {
+    next(new ExpressError(404 , "Page Not Found!"));
+});
 
 // Template For All Types Of Error
 app.use((err , req , res , next) => {
@@ -115,11 +119,6 @@ app.use((err , req , res , next) => {
     res.render("Listings/error.ejs" , {message, status});
     next();
 })
-
-// Page Not Found Error For Wrong Route
-app.all("*" , (err , res , next) => {
-    next(new ExpressError(404 , "Page Not Found!"));
-});
 
 // Listening Port For Server
 app.listen("8080" , () => {
