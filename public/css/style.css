@@ -135,3 +135,55 @@ h1{
     height: 400px;
     width: 100vh;
 }
+
+.brand{
+    color: rgb(205, 43, 226);
+    text-align: center;
+    align-items: center;
+    height: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ebebeb;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.content{
+    padding: 0 1rem 0 1rem;
+    border-radius: 20px;
+    background-color: rgb(174, 174, 236);
+    box-shadow: 1px 1px 2px black;
+    transition: 0.7s;
+}
+
+.content:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #011936FF;
+}
+
+.b{
+    color: #0A5E2AFF;   
+}
+
+.brace{
+    color: #0A5E2AFF;
+}
+
+.love{
+    color: #011936FF;
+}
+
+.heart{
+    color: red;
+    content: "\2764";
+}
+
+.name{
+    
+    font-family: 'Freehand', cursive;
+}
+
+/* .name:hover{
+    font-size: 30px;
+    font-weight: 200;
+} */
